@@ -7,12 +7,18 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body {
+h1 {
+    margin: 50px auto;
+    color: #fff;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+    background-color: #252525;
 }
 
 .wrapper {
-    margin: 100px auto;
+    margin: 50px auto;
     max-width: 1100px;
 }
 
@@ -86,6 +92,73 @@ nav .items .item:hover {
 
 .gallery .image:hover img {
     transform: scale(1.1);
+}
+
+.preview-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 10px 10px 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.preview-box .details {
+    display: flex;
+    align-items: center;
+    padding: 13px 15px 13px 10px;
+    justify-content: space-between;
+}
+
+.preview-box .details .title {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.details .title p {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.details .fa-solid {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.preview-box .image-box {
+    display: flex;
+    width: 100%;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 0, 0, 3px, 3px;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: none;
 }
 
 @media (max-width: 1000px){

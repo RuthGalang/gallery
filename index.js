@@ -19,4 +19,7 @@ window.onload = ()=> {
             })
         }
     }
+    for (let index = 0; index < filterImg.length; index++) {
+        filterImg[index].setAttribute("onclick", "preview(this)");
+    }
 }
